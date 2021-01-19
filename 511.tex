@@ -1,0 +1,60 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage{graphicx}
+
+\begin{document}
+\footnotesize
+
+\begin{flushright}
+\textsf{\textbf{  Computability and Undecidability $|$ 511}}
+\end{flushright}
+
+(As the virus detection problem is undecidable, there exists no anti-virus program! Amazing? Yes, it is
+true. The various anti-virus software just keep a record of the known viruses. If a program P matches with one of them, then P is declared as a virus. For this reason, we need to update our anti-virus software regularly.)
+
+\begin{flushleft}
+\large
+\textsf{10.7\, Post’s Correspondence Problem (PCP)}
+\end{flushleft}
+\begin{flushleft}
+The Post correspondence problem (PCP) was proposed by an American mathematician Emil Leon Post in 1946. This is a well-known undecidable problem in the theory of computer science. PCP is very useful for showing the undecidability of many other problems by means of reducibility.
+
+
+\qquad Before discussing the theory of PCP, let us play game. Let there be N cards where each of them are
+divided into two parts. Each card contains a top string and a bottom string.
+
+\quad
+
+\textit{\textbf{Example:}} Let N = 5 and the cards be the following.
+\end{flushleft}
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=11cm]{1}\\
+\end{figure}
+\textit{\textbf{Aim of the game:}} Is to arrange the cards in such a manner that the top and the bottom strings become same.
+
+\quad
+
+\textit{\textbf{\!\!\!\!\!\!\!\!\!\!Solution for the example:}} Solution is possible and the sequence is 4 3 2 5 1
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=11cm]{2}
+\end{figure}
+
+Let us take another kind of example and try to find the solution.
+
+\quad
+
+\emph{\!\!\!\!\!\!\!\!\!\!Example:} There are four types of cards, and each are five in number, which means there is a total 20 cards.There are four players. At the beginning of the game, each player will get five random cards. The game starts with the single card shifting, starting from one of the players. Getting a card from the left player, the player shifts one card from his/her collection to the immediate right player. Player able to show 5 cards arranged in a particular sequence, which constructs same top and bottom strings; then the player will win.
+
+The four different cards are
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=9.5cm]{3}
+\end{figure}
+
+\end{document} 

@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage{graphicx}
+  % Requires \usepackage{graphicx}
+
+\begin{document}
+\footnotesize
+
+\begin{flushleft}
+ \textsf{\textbf{ 512 $|$ Introduction to Automata Theory, Formal Languages and Computation}}
+ 
+ \quad
+ 
+\textit{ \textbf{Solution:}} Yes, it is possible. The sequence is 2 1 4 3 2.
+\end{flushleft}
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=10cm]{2}
+\end{figure}
+
+But,for all types of cards,the solution is not possible.The game will continue for an infinite time.There is a condition which must be fulfilled to make the game halt.The condition is
+
+\quad
+
+1. At least one card must contain same starting character the top and bottom strings.
+ 
+\quad Though if the condition is fulfilled,it cannot be said confirm that the game will halt.
+
+\begin{flushleft}
+\textit{\textbf{The Post Correspondence Problem:}} Given two sequences of strings $w_{1}, w_{2}, ... , w_{n}$ and $x_{1}, x_{2}, ... , x_{n}$ over $\sum$ .  The solution of the problem is to find a \quad non-empty sequence of integers $i_{1}, i_{2}, ... , i_{k}$ such that $w_{i1}\, w_{i2} ... w_{ik} = x_{i1}\, x_{i2} ... x_{ik}.$
+\end{flushleft}
+
+The solution of PCP hides in the condition $w_{i1}\, w_{i2} ... w_{ik} = x_{i1}\, x_{i2} ... x_{ik}$.
+
+If there exists a solution for a given instance of PCP, there may exist multiple solutions for that
+instance of PCP.
+
+As an example, consider the previous example.
+
+$\sum = \{0 , 1\}$ and the sequence of string $w_{i}, x_{i}$ are as follows.
+
+\begin{table}[h]
+  \centering
+ \textbf{\textsf{ --------------------------------------- }}
+  
+ i \qquad\qquad $w_{i} \qquad\qquad x_{i}$
+ 
+ -----------------------------------------
+ 
+ 1 \qquad\qquad 01 \qquad\qquad 0
+ 
+ 
+ \;\;2 \qquad\qquad 1 \qquad\qquad 101
+ 
+ 
+ 3 \qquad\qquad 10 \qquad\qquad 0
+ 
+ 
+ 4 \qquad\qquad\!\!\! 010 \qquad\quad\;\; 1
+ 
+\textsf{\textbf{ ---------------------------------------}}
+\end{table}
+
+The problem has a solution $i_{1} = 2 , i_{2} = 1 , i_{3} = 4 , i_{4} = 3 , i_{5} = 2$ and the string is
+
+$$  \underline{\overline{1}\, \overline{01}}\,
+\overline{\underline{0} \, \underline{1} \, \underline{0}}\,
+\underline{\overline{10} \, \overline{1}} $$
+
+\begin{flushleft}
+\begin{figure}[h]
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=3cm]{1}\; Find whether there is a solution for following PCP problem.
+\end{figure}
+\end{flushleft}
+
+\begin{center}
+ \textbf{\textsf{ --------------------------------------- }}
+
+ i \qquad\qquad $w_{i} \qquad\qquad x_{i}$
+
+ -----------------------------------------
+
+ 1 \qquad\qquad 01 \qquad\qquad 0
+
+
+ \;\;2 \qquad\qquad 1 \qquad\qquad 101
+
+
+ 3 \qquad\qquad 10 \qquad\qquad 0
+
+
+ 4 \qquad\qquad\!\!\! 010 \qquad\quad\;\; 1
+
+\textsf{\textbf{ ---------------------------------------}}
+\end{center}
+
+
+\begin{flushleft}
+\textit{\textbf{Solution:}} To get a solution, the top and bottom strings of at least one card must start with the same character. But here, the top and bottom strings of no cards start with same character. Thus, this PCP problem does not have any solution.
+\end{flushleft}
+
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage{graphicx}
+% Requires \usepackage{graphicx}
+
+\begin{document}
+\footnotesize
+
+\begin{flushright}
+  \textsf{\textbf{Computability and Undecidability $|$ 509}}
+\end{flushright}
+
+\quad
+
+Put the output of T as the input to E. But, we know that the halting problem is undecidable, so the problem ‘whether an arbitrary RE language is empty’ is also undecidable.
+
+\begin{flushleft}
+\begin{figure}[h]
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=3.5cm]{1} Prove that the problem ‘whether a recursively enumer-
+  
+  \qquad\qquad\qquad\qquad\qquad\,able language L(M) is finite’is undecidable.
+\end{figure}
+\end{flushleft}
+
+\textbf{\textit{\!\!\!\!\!\!\!\!\!\!Solution:}} This can be proved by reducing the halting problem to it.
+
+Let M be the TM accepting L. Suppose that Mf is a decider for the finite language problem which
+takes the TM M as input.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=8cm]{2}\\
+\end{figure}
+\!\!\!\!\!\!\!\!\!\!Suppose that there is decider for halting problem which takes TM M and a string w as input.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=9cm]{3}\\
+\end{figure}
+
+Now, reduce the halting problem to the finite language problem which constructs the machine $M_{w}$ using the following process.
+
+On input w to M,
+
+\quad
+
+i)\; Design the machine $M_{w}$ such that when M enters into one of its halting states, $M_{w}$ 
+
+\quad\,enters into its final state. $M_{w}$ copies w on some special location of its input tape and 
+
+\quad\,then performs the same computation as M using the input w written on its input tape.
+
+ii)\; If M enters into any one of its halting states, $M_{w}$ halts reaching its final state.
+
+iii)\; If M does not enter into its halting state, $M_{w}$ does not halt and thus accepts nothing.
+
+\,
+
+In other words, $M_{w}$ accepts either the infinite language $\Sigma^{+}$ or the finite language $\phi$.
+
+The final decider is given in the following diagram.
+
+\begin{figure}
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=11cm]{4}\\
+
+  \qquad
+
+  \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\! Already,it is proved that the halting problem is undecidable.So, $M_{f}$ is also undecidable
+\end{figure}
+
+\begin{figure}
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=0cm]{4}\\
+\end{figure}
+
+\begin{figure}
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=0cm]{4}\\
+\end{figure}
+
+
+\end{document}

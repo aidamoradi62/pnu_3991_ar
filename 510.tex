@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage{graphicx}
+  % Requires \usepackage{graphicx}
+
+\begin{document}
+\footnotesize
+
+\begin{flushleft}
+  \textsf{\textbf{510 $|$ Introduction to Automata Theory, Formal Languages and Computation}}
+\end{flushleft}
+
+\begin{flushleft}
+\begin{figure}[h]
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=3.5cm]{1}\quad Prove that the problem ‘whether L(M) contains two
+   
+  \qquad\quad\qquad\qquad\qquad\qquad\,strings of the same length’ is undecidable.
+\end{figure}
+\end{flushleft}
+
+\textbf{\textit{\!\!\!\!\!\!\!\!\!\!Solution:}} This can be proved by reducing the halting problem to it. Reduce the halting problem to this problem by constructing a machine $M_{w}$ using the following process.
+
+On input w to M (the halting problem decider)
+
+\quad
+
+i)\;$M_{w}$ copies w on some special location of its input tape and then performs the same
+
+\quad\,computation as M using the input w written on its input tape.
+
+ii)\;If w = a or w = b, M enters into one of its halting states and $M_{w}$ reaches its final
+ 
+\quad\,state. Thus,L($M_{w}$) = {a, b}
+
+iii)\;Otherwise, reject. Thus L($M_{w}$) = ${\phi}$.
+
+The final decider is given in the following diagram.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=10cm]{2}\\
+\end{figure}
+
+\!\!\!Already,it is proved that the halting problem is undecidable.So,$ME_{ql}$ is also undecidable.
+
+\begin{flushleft}
+\begin{figure}[h]
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=3.5cm]{3}\quad Prove that the virus detection is undecidable.
+\end{figure}
+\end{flushleft}
+
+\textbf{\textit{\!\!\!\!\!\!\!\!\!\!Solution:}} A computer virus is an executable program that can replicate itself and spread from one
+computer to another. Every file or program that becomes infected can act as a virus itself, allowing it to spread to other files and computers. But the virus detection problem is undecidable! This can be proved
+using the undecidability of halting problem.
+
+Let us define a virus by an algorithm called the ‘is-virus?’
+
+\quad
+
+For a program P,
+
+define (halts for input P)
+
+\qquad\qquad if (is-virus?)\quad\qquad //Execute P assuming P is not a virus.
+
+\qquad\qquad $\{$
+
+\qquad\qquad\; //\, If true
+
+
+\qquad\qquad\; Virus-code is evaluated. If it is a virus, and P must halt.
+
+\qquad\qquad $\}$
+
+\qquad\qquad\; //\, If false
+
+\qquad\qquad\; Virus-code never executed. Hence, P must not halt.
+
+\qquad
+
+Already, we have proved that the halting problem is undecidable. Hence, the virus detection problem
+is undecidable.
+
+\end{document} 
